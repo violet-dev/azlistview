@@ -19,6 +19,7 @@ class SuspensionView extends StatefulWidget {
     this.susPosition,
     this.physics,
     this.padding,
+    this.minCacheExtent,
   }) : super(key: key);
 
   /// Suspension data.
@@ -56,6 +57,8 @@ class SuspensionView extends StatefulWidget {
 
   /// The amount of space by which to inset the children.
   final EdgeInsets? padding;
+
+  final double? minCacheExtent;
 
   @override
   _SuspensionViewState createState() => _SuspensionViewState();
@@ -157,6 +160,7 @@ class _SuspensionViewState extends State<SuspensionView> {
                 itemPositionsListener: itemPositionsListener,
                 physics: widget.physics,
                 padding: widget.padding,
+                minCacheExtent: widget.minCacheExtent,
               ),
         _buildSusWidget(context),
       ],
